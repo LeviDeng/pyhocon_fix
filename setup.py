@@ -1,23 +1,24 @@
 from distutils.core import setup
+from setuptools import setup, find_packages
 
-PACKAGE = "pyhocon-fix"
-NAME = "pyhocon-fix"
-DESCRIPTION = "This package can download funds data from http://huobijijin.com and then analyze the data for giving valuable funds."
+PACKAGE = "pyhocon_fix"
+NAME = "pyhocon_fix"
+DESCRIPTION = "Fixed json escape of pyhocon"
 AUTHOR = "Lin Deng"
 AUTHOR_EMAIL = "ptreesptrees@gmail.com"
-URL = "https://github.com/FinixLei/FundsData"
-VERSION = __import__(PACKAGE).__version__
+URL = "https://github.com/LeviDeng/pyhocon-fix"
+#VERSION = __import__(PACKAGE).__version__
 
 setup(
     name=NAME,
-    version=VERSION,
+    version="0.0.2",
     description=DESCRIPTION,
     # long_description=read("README.md"),
     author=AUTHOR,
     author_email=AUTHOR_EMAIL,
     license="Apache License, Version 2.0",
     url=URL,
-    packages=["FundsData"],
+    packages=find_packages(exclude=['contrib', 'docs', 'tests']),
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Environment :: Web Environment",
